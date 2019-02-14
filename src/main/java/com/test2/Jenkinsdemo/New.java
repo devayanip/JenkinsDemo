@@ -34,8 +34,9 @@ public class New
 		//Assert.assertEquals(driver.getCurrentUrl(), "https://phptravels.org/register.php");
 		
 		fname.sendKeys("Jack");
-		
+
 		System.out.println("damini deokar");
+
 		lname.sendKeys("Jonas");
 	}
 		
