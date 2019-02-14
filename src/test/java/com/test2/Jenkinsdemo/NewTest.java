@@ -55,6 +55,7 @@ public class NewTest {
   @AfterTest
   public void afterTest() 
   {
+	  System.out.println("abcdefghijklmnopqrstuvwxyz");
 	  driver.quit();
   }
 
