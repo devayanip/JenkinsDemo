@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 public class New 
 {
@@ -31,7 +31,7 @@ public class New
 	{	
 		reg.click();
 		
-		Assert.assertEquals(driver.getCurrentUrl(), "https://phptravels.org/register.php");
+		//Assert.assertEquals(driver.getCurrentUrl(), "https://phptravels.org/register.php");
 		
 		fname.sendKeys("Jack");
 

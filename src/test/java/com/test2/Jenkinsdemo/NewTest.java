@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 
@@ -28,18 +29,18 @@ public class NewTest {
   {
 	  String br=brow;
 	  
-	  if(br.equalsIgnoreCase("chrome"))
-	  {
-		  System.setProperty("webdriver.chrome.driver", "Resource/chromedriver.exe");
-		  
-		  driver=new ChromeDriver();
-	  }
+		/*
+		 * if(br.equalsIgnoreCase("chrome")) {
+		 * System.setProperty("webdriver.chrome.driver", "Resource/chromedriver.exe");
+		 * 
+		 * driver=new ChromeDriver(); }
+		 */
 	  
 	  if(br.equalsIgnoreCase("ie"))
 	  {
 		  System.setProperty("webdriver.ie.driver", "Resource/IEDriverServer.exe");
 		  
-		  driver=new ChromeDriver();
+		  driver=new InternetExplorerDriver();
 	  }
 	  
 	  driver.get("https://phptravels.org/clientarea.php");
@@ -54,6 +55,7 @@ public class NewTest {
   @AfterTest
   public void afterTest() 
   {
+	  System.out.println("abcdefghijklmnopqrstuvwxyz");
 	  driver.quit();
   }
 
