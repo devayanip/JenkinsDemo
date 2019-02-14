@@ -36,6 +36,7 @@ public class New
 		fname.sendKeys("Jack");
 
 		System.out.println("damini deokar");
+		System.out.println("deva");
 
 		lname.sendKeys("Jonas");
 	}
