@@ -68,16 +68,17 @@ public class NewTest {
 	  driver.manage().window().maximize();
 	  
 	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	  
+	  test.pass("URL successfully opened");
   }
 
   @AfterTest
   public void afterTest() 
   {
+	  //test.pass("Close all");
 	  //System.out.println("abcdefghijklmnopqrstuvwxyz");
-	  extent.flush();
 	  driver.quit();
-	  
-	  test.pass("Close all");
+	  extent.flush();
   }
 
 }
