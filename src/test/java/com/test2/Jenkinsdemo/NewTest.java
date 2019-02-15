@@ -38,21 +38,27 @@ public class NewTest {
 	  extent=new ExtentReports();
 	  extent.attachReporter(htmlReporter);
 	  ExtentTest test=extent.createTest("Deva test");
+	  test.pass("Started test");
 	  
 	  String br=brow;
 	  
-		/*
-		 * if(br.equalsIgnoreCase("chrome")) {
-		 * System.setProperty("webdriver.chrome.driver", "Resource/chromedriver.exe");
-		 * 
-		 * driver=new ChromeDriver(); }
-		 */
-	  
+		
+	  if(br.equalsIgnoreCase("chrome")) 
+	  {
+		  System.setProperty("webdriver.chrome.driver", "Resource/chromedriver.exe");
+		 
+		  driver=new ChromeDriver(); 
+		  
+		  test.pass("Chrome pass");
+	  }
+		 
 	  if(br.equalsIgnoreCase("ie"))
 	  {
 		  System.setProperty("webdriver.ie.driver", "Resource/IEDriverServer.exe");
 		  
 		  driver=new InternetExplorerDriver();
+		  
+		  test.pass("IE Pass");
 	  }
 	  
 	  driver.get("https://phptravels.org/clientarea.php");
@@ -67,9 +73,11 @@ public class NewTest {
   @AfterTest
   public void afterTest() 
   {
-	  System.out.println("abcdefghijklmnopqrstuvwxyz");
+	  //System.out.println("abcdefghijklmnopqrstuvwxyz");
 	  extent.flush();
 	  driver.quit();
+	  
+	  test.pass("Close all");
   }
 
 }
