@@ -1,6 +1,11 @@
 package com.test2.Jenkinsdemo;
 
 import org.testng.annotations.Test;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -15,6 +20,8 @@ import org.testng.annotations.AfterTest;
 public class NewTest {
 	
 	WebDriver driver;
+	ExtentReports extent;
+	ExtentTest test;
 	
   @Test
   public void f() 
@@ -27,6 +34,11 @@ public class NewTest {
   @BeforeTest
   public void beforeTest(String brow) 
   {
+	  ExtentHtmlReporter htmlReporter=new ExtentHtmlReporter("Resource/ExtentReport.html");
+	  extent=new ExtentReports();
+	  extent.attachReporter(htmlReporter);
+	  ExtentTest test=extent.createTest("Deva test");
+	  
 	  String br=brow;
 	  
 		/*
@@ -56,6 +68,7 @@ public class NewTest {
   public void afterTest() 
   {
 	  System.out.println("abcdefghijklmnopqrstuvwxyz");
+	  extent.flush();
 	  driver.quit();
   }
 

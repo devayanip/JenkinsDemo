@@ -20,6 +20,9 @@ public class New
 	@FindBy(id="inputLastName")
 	WebElement lname;
 	
+	@FindBy(id="inputEmail")
+	WebElement email;
+	
 	public New(WebDriver driver2) 
 	{
 		driver=driver2;
@@ -36,7 +39,10 @@ public class New
 		fname.sendKeys("Jack");
 		
 		System.out.println("damini deokar");
+		
 		lname.sendKeys("Jonas");
+		
+		email.sendKeys("jack@gmail.com");
 	}
 		
 }
