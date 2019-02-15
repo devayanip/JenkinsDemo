@@ -75,7 +75,7 @@ public class NewTest {
   @AfterTest
   public void afterTest() 
   {
-	  //test.pass("Close all");
+	  test.pass("Close all");
 	  //System.out.println("abcdefghijklmnopqrstuvwxyz");
 	  driver.quit();
 	  extent.flush();
