@@ -41,9 +41,9 @@ public class NewTest {
 	  }
 	  catch (Exception e) 
 	  {
-		test.fail("error").addScreenCaptureFromPath(common.screenshot("prob2"));
-		/*MediaEntityModelProvider mediaModel = MediaEntityBuilder.createScreenCaptureFromPath(common.screenshot("prob1")).build();
-		test.fail("error in sign up",mediaModel);*/
+		//test.fail("error").addScreenCaptureFromPath(common.screenshot("new"));
+		MediaEntityModelProvider mediaModel = MediaEntityBuilder.createScreenCaptureFromPath(common.screenshot("prob1")).build();
+		test.fail("error in sign up",mediaModel);
 	  }
   }
   
@@ -72,14 +72,14 @@ public class NewTest {
 		  test.info("Chrome pass");
 	  }
 		 
-	  if(br.equalsIgnoreCase("ie"))
+	  /*if(br.equalsIgnoreCase("ie"))
 	  {
 		  System.setProperty("webdriver.ie.driver", "Resource/IEDriverServer.exe");
 		  
 		  driver=new InternetExplorerDriver();
 		  
 		  test.info("IE Pass");
-	  }
+	  }*/
 	  
 	  driver.get("https://phptravels.org/clientarea.php");
 	  
@@ -95,7 +95,7 @@ public class NewTest {
   @AfterTest
   public void afterTest() 
   {
-	  //test.info("Close all");
+	  test.info("Close all");
 	  //System.out.println("abcdefghijklmnopqrstuvwxyz");
 	  driver.quit();
 	  extent.flush();

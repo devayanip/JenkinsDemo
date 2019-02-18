@@ -7,10 +7,5 @@
       <class name="com.test2.Jenkinsdemo.NewTest"/>
     </classes>
   </test> <!-- Test -->
-  <test name="Test2">
-  <parameter name="browserName" value="ie"></parameter>
-    <classes>
-      <class name="com.test2.Jenkinsdemo.NewTest"/>
-    </classes>
-  </test> <!-- Test -->
+  
 </suite> <!-- Suite -->
