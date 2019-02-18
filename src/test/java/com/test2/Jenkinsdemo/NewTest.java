@@ -41,9 +41,9 @@ public class NewTest {
 	  }
 	  catch (Exception e) 
 	  {
-		//test.fail("error").addScreenCaptureFromPath(common.screenshot("prob2"));
-		MediaEntityModelProvider mediaModel = MediaEntityBuilder.createScreenCaptureFromPath(common.screenshot("prob1")).build();
-		test.fail("error in sign up",mediaModel);
+		test.fail("error").addScreenCaptureFromPath(common.screenshot("prob2"));
+		/*MediaEntityModelProvider mediaModel = MediaEntityBuilder.createScreenCaptureFromPath(common.screenshot("prob1")).build();
+		test.fail("error in sign up",mediaModel);*/
 	  }
   }
   
